@@ -6,8 +6,8 @@ st.write("StockX is a web application that utilizes the power of Deep Learning a
 st.sidebar.header("Navigation")
 st.write("Welcome to StockX! Click a button above to navigate.")
 # Add pages using the correct method (streamlit-multipage)
-st.page_link("pages\StockDashboard.py",label="Stock Dashboard",icon="🏠")
-st.page_link("pages\model.py",label="model_training",icon="🌎")
+st.page_link("StockDashboard.py",label="Stock Dashboard",icon="🏠")
+st.page_link("model.py",label="model_training",icon="🌎")
 
 # Add creator names and contact information
 st.write("Created by:")
