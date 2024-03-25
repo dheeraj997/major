@@ -71,7 +71,7 @@ idna==3.4
 iexfinance==0.5.0
 importlib-metadata==6.11.0
 invoke==2.2.0
-ipython==8.20.0
+ipython==8.18.1
 ipywidgets==8.1.1
 isodate==0.6.1
 itsdangerous==2.1.2
