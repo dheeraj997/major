@@ -230,6 +230,10 @@ class StockPricePredictor:
         # Concatenating the forecast_df with gs_slice_data
         combined_data = pd.concat([gs_slice_data, forecast_df])
 
+                
+        combined_data[['future_open_predicted', 'future_close_predicted', 'future_high_predicted', 'future_low_predicted']] = scaler.inverse_transform(combined_data[['future_open_predicted', 'future_close_predicted', 'future_high_predicted', 'future_low_predicted']])
+
+
         # Plotting the data
         fig = px.line(combined_data, x=combined_data.index, y=['future_open_predicted', 'future_close_predicted', 'future_high_predicted', 'future_low_predicted'],
                     labels={'value': 'Stock Price', 'variable': 'Stock Type'},
