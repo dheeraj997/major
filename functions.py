@@ -15,7 +15,7 @@ class StockPricePredictor:
         pass
     
     def get_historical_data(self, tinker,start_date,end_date):
-    # Your function implementation here
+   
         headers = {
         'Content-Type': 'application/json',
         'Authorization': 'Token 0b4623cf02c29229cfa1f8790ccba6d0bd04983c'
@@ -43,7 +43,7 @@ class StockPricePredictor:
         
     
     def preprocess_data(self, df):
-        # Your function implementation here
+        
         try:
     # Attempt to convert 'date' to datetime format if it exists
             df['date'] = pd.to_datetime(df['date'], format='%Y-%m-%dT%H:%M:%S.%fZ')
