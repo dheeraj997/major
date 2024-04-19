@@ -119,7 +119,7 @@ class StockPricePredictor:
 
     
     def create_lstm_model(self, train_seq):
-        # Your function implementation here
+        
         model=Sequential()
         model.add(LSTM(units=50, return_sequences=True, input_shape = (train_seq.shape[1], train_seq.shape[2])))
         model.add(Dropout(0.1))
@@ -132,7 +132,7 @@ class StockPricePredictor:
         return model
     
     def predictions_data_analysis(self, test_predicted, gstock_data, scaler):
-        # Your function implementation here
+        
         test_inverse_predicted = scaler.inverse_transform(test_predicted)
 
         gstock_subset = gstock_data.iloc[-test_predicted.shape[0]:].copy()
@@ -174,7 +174,7 @@ class StockPricePredictor:
         return gs_slice_data
     
     def forecasting(self, temp_input,model):
-        # Your function implementation here
+       
         lst_output = []
         n_steps = 50  # Number of timesteps
         n_features = 4  # Number of features
@@ -195,7 +195,7 @@ class StockPricePredictor:
                 i += 1
         return lst_output        
     def plot_predictions(self, gs_slice_data, scaler, test_predicted, lst_output):
-        # Your function implementation here
+        
         day_new = np.arange(len(gs_slice_data) - len(test_predicted), len(gs_slice_data))
         day_pred = np.arange(len(gs_slice_data), len(gs_slice_data) + len(lst_output))
 
